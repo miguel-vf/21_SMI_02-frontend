@@ -15,7 +15,7 @@ export default {
       Video
     },
     props: {
-      book: Object
+      video: Object
     },
     data() {
       return {
