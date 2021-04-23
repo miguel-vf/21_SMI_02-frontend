@@ -6,7 +6,7 @@
 export default {
     name: "Register",
     props: {
-      book: Object
+      video: Object
     },
     data() {
       return {

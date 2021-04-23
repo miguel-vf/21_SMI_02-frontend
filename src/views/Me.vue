@@ -6,7 +6,7 @@
 export default {
     name: "Me",
     props: {
-      book: Object
+      video: Object
     },
     data() {
       return {
