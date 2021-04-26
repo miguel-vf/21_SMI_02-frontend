@@ -1,7 +1,7 @@
 <template>
     <div class="video">
       <div class="box">
-        <img :src="Config.mediaURL + `${video.thumbnail}`" alt="Video thumbnail">
+        <img :src="`${baseURL}${video.thumbnail}`" alt="Video thumbnail">
         <p>
             <strong>{{ video.title }}</strong>
         <br>
@@ -21,6 +21,7 @@ import Config from '../config/config'
     },
     data() {
       return {
+        baseURL: Config.mediaURL
           // State of the component
       }
     }
