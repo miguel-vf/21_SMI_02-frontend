@@ -7,7 +7,9 @@
         <br>
             {{ video.author }}
         </p>
-        <source :src="`${baseURL}${video.file}`" type="video/mp4" />
+        <div class="player">
+          <video :src="`${baseURL}${video.file}`" data-dashjs-player="" autoplay="" controls="true"></video>
+        </div>
       </div>
     </div>  
 </template>
