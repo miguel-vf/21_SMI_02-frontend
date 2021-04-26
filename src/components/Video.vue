@@ -42,6 +42,8 @@ import Config from '../config/config'
 
 img {
   border-radius: 5px;
+  width: 300px;
+  height: 168px;
 }
 
 </style>
