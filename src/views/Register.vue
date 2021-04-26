@@ -3,7 +3,7 @@
     <h1>Register</h1>
       <hr/>
     <div class>
-      <form name="form" @submit.prevent="handleSingup">
+      <form name="form" @submit.prevent="handleSignup">
         <div>
           <label for="username">Username</label>
           <input

@@ -17,7 +17,11 @@ export default {
         localStorage.removeItem('user');
     },
 
-    register(user) {
-        return Service.post( '/signup', user);
+    async register(user) {
+        const response = await Service.post( '/signup', {
+            username: user.username,
+            password: user.password
+        });
+        return response.data;
     },
 }

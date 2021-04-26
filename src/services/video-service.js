@@ -1,7 +1,8 @@
 import Service from './service.js';
 import authHeader from './auth-header';
+import Config from '../config/config';
 
-const resource = 'videos'; //There should be a route /videos in the backend (check it), we request it using http
+const resource = Config.mediaURL + 'videos'; //There should be a route /videos in the backend (check it), we request it using http
 
 export default {
     getAll() {
