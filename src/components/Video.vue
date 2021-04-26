@@ -1,7 +1,7 @@
 <template>
     <div class="video">
       <div class="box">
-        <img :src="`${video.thumbnail}`" alt="Video thumbnail">
+        <img :src="Config.mediaURL + `${video.thumbnail}`" alt="Video thumbnail">
         <p>
             <strong>{{ video.title }}</strong>
         <br>
@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import Config from '../config/config'
+
   export default {
     name: "Video",    
     props: {
