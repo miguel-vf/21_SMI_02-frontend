@@ -7,6 +7,7 @@
         <br>
             {{ video.author }}
         </p>
+        <source src="`${baseURL}${video.file}`" type="video/mp4" />
       </div>
     </div>  
 </template>
