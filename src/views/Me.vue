@@ -33,7 +33,7 @@ export default {
     methods: {
       handleLogout(){
         this.loading = false;
-        if (this.user.username && this.user.password) {
+        
         try {
           // Logout
           this.$store.dispatch('auth/logout');
@@ -45,7 +45,7 @@ export default {
               (error.response && error.response.data) ||
               error.message ||
               error.toString();
-        }
+        
       }
     }
 
