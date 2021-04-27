@@ -49,14 +49,14 @@ export default {
     };
   },
   methods: {    
-    async handleSignup() {
+     handleSignup() {
       this.loading = true;
 
       if (this.user.username && this.user.password) {
         try {
           // Register
-          await this.$store.dispatch('auth/signup', this.user);
-          await this.$router.push('/me');
+          this.$store.dispatch('auth/register', this.user);
+          this.$router.push('/me');
         }
         catch ( error) {
           this.loading = false;
