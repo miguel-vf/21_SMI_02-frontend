@@ -10,6 +10,9 @@
         <div class="player">
           <video :src="`${baseURL}${video.file}`" data-dashjs-player="" autoplay="" controls="true"></video>
         </div>
+        <p>
+            {{ video.description }}
+        </p>
       </div>
     </div>  
 </template>
