@@ -49,4 +49,10 @@ img {
   height: 168px;
 }
 
+video {
+  border-radius: 5px;
+  width: 600px;
+  height: 336px;
+}
+
 </style>
