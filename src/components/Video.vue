@@ -8,7 +8,7 @@
             {{ video.author }}
         </p>
         <div class="player">
-          <video :src="`${baseURL}${video.file}`" data-dashjs-player="" autoplay="" controls="true"></video>
+          <video :src="`${baseURL}${video.file}`" data-dashjs-player="" controls="true"></video>
         </div>
         <p>
             {{ video.description }}
