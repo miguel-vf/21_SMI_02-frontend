@@ -1,10 +1,12 @@
 <template>
-  <nav class="navigation">
-    <ul>
-      <li><router-link to="/">Videos</router-link></li>
-      <li><router-link to="upload">Upload</router-link></li>
-      <li><router-link to="me">Me</router-link></li>
-    </ul>
+  <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
+    <div class="container">
+      <ul class="nav navbar-nav flex-row float-left">
+        <li class="nav-item"><router-link class="btn btn-outline-primary" style="" to="/">Main page</router-link></li>
+        <li class="nav-item"><router-link class="nav-link pr-3" to="upload">Upload</router-link></li>
+        <li class="nav-item"><router-link class="nav-link pr-3" to="me">User managment</router-link></li>
+      </ul>
+    </div>
   </nav>
 </template>
 
@@ -17,28 +19,3 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-</style>

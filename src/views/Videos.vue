@@ -1,7 +1,11 @@
 <template>
+<div class="vertical-center">
+<div class="inner-block-videos">
   <div class="videos">
   <h1>Videos</h1>
   <Video v-for="(video, index) in videos" :key="index" :video="video" />
+  </div>
+</div>
 </div>
 </template>
 

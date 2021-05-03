@@ -1,38 +1,43 @@
 <template>
-  <div class="login">
-    <h1>Login</h1>
-      <hr/>
-    <div class>
-      <form name="form" @submit.prevent="handleLogin">
-        <div>
-          <label for="username">Username</label>
-          <input
-            v-model="user.username"            
-            type="text"
-            name="username"
-          />
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input
-            v-model="user.password"            
-            type="password" 
-            name="password"
-          />
-        </div>
-        <div>
-          <button :disabled="loading">
-            <span>Login</span>            
-          </button>
-          <router-link to="/register">Register</router-link>
-        </div>
-        <div>
-          <div v-if="message" role="alert">{{ message }}</div>
-        </div>
-      </form>
-    </div>
 
-  </div>
+<div class="vertical-center">
+<div class="inner-block">
+    <div class="vue-tempalte">
+        <form name="form" @submit.prevent="handleLogin">
+          <h3>Login</h3>
+
+           <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                v-model="user.username"            
+                type="text"
+                name="username"
+                class="form-control form-control-lg"
+              />
+           </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  v-model="user.password"            
+                  type="password" 
+                  name="password"
+                  class="form-control form-control-lg"
+                />
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-lg btn-block">Login</button>
+
+            <p class="forgot-password text-right mt-2 mb-4">
+                <router-link to="/register">Not yet registered?</router-link>
+            </p>
+            <div>
+              <div v-if="message" role="alert">{{ message }}</div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
 </template>
 
 <script>
@@ -70,6 +75,7 @@ export default {
   }
 };
 </script>
+
 
 <style>
 </style>

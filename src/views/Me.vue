@@ -1,11 +1,14 @@
 <template>
-   <div class="me">
-    <h1>Me</h1>
+  <div class="vertical-center">
+  <div class="inner-block">
+   <div class="vue-tempalte">
+    <h1>User managment</h1>
       <hr/>
     <div class>
       <form name="form" @submit.prevent="handleLogout">
         <div>
-          <button :disabled="loading">
+          <h5>Do you want to logout?</h5>
+          <button :disabled="loading" class="btn btn-dark btn-lg btn-block">
             <span>Logout</span>            
           </button>
         </div>
@@ -14,7 +17,8 @@
         </div>
       </form>
     </div>
-
+    </div>
+  </div>
   </div>
 </template>
 

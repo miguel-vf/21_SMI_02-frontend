@@ -1,17 +1,15 @@
 <template>
     <div class="video">
-      <div class="box">
-        <img :src="`${baseURL}${video.thumbnail}`" alt="Video thumbnail">
+      <div class="box-video">
         <p>
-            <strong>{{ video.title }}</strong>
-        <br>
-            {{ video.author }}
+            <strong class="video-title">{{ video.title }}</strong>
+        <br>@{{ video.author }}
         </p>
-        <div class="player">
+        <img :src="`${baseURL}${video.thumbnail}`" alt="Video thumbnail" v-show="!showVideo" v-on:click="showVideo=true">
+        <div class="player" v-show="showVideo">
           <video :src="`${baseURL}${video.file}`" data-dashjs-player="" controls="true"></video>
         </div>
-        <p>
-            {{ video.description }}
+        <p>{{ video.description }}
         </p>
       </div>
     </div>  
@@ -20,39 +18,21 @@
 <script>
 import Config from '../config/config'
 
-  export default {
+
+export default {
     name: "Video",    
     props: {
       video: Object
     },
     data() {
       return {
-        baseURL: Config.mediaURL
+        baseURL: Config.mediaURL,
+        showVideo: false
           // State of the component
       }
     }
   }
 </script>
 
-<style scoped>
-.box {
-  max-width: 60%;
-  padding-bottom: 15px;
-  border-radius: 5px;
-  border-color: darkgrey;
-  margin: 5px auto;
-}
-
-img {
-  border-radius: 5px;
-  width: 300px;
-  height: 168px;
-}
-
-video {
-  border-radius: 5px;
-  width: 600px;
-  height: 336px;
-}
-
+<style>
 </style>
