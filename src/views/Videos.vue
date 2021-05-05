@@ -6,6 +6,9 @@
   <h4>To upload a video, please sign in.</h4>
   <Video v-for="(video, index) in videos" :key="index" :video="video" />
   </div>
+  <div class="credits">
+    <h5>Credits: Nuria Álvarez González and Miguel Villanueva Fernández</h5>
+  </div>
 </div>
 </div>
 </template>
