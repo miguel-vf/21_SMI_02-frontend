@@ -2,7 +2,8 @@
 <div class="vertical-center">
 <div class="inner-block-videos">
   <div class="videos">
-  <h1>Videos</h1>
+  <h2>This is a service for short videos.</h2>
+  <h4>To upload a video, please sign in.</h4>
   <Video v-for="(video, index) in videos" :key="index" :video="video" />
   </div>
 </div>
