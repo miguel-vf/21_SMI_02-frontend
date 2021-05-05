@@ -24,7 +24,8 @@
   }
   
   .vertical-center {
-    display: flex;
+    display: start;
+    margin-top: 100px;
     text-align: left;
     justify-content: center;
     flex-direction: column;    
@@ -117,6 +118,10 @@
 
   .file-upload {
     padding-bottom: 10px;
+  }
+
+  .file-descr {
+    margin-right: 20px;
   }
 
   .video {

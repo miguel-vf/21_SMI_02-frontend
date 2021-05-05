@@ -34,16 +34,19 @@
           /> 
         </div>
         <div>
-          <label for="file">Video file upload</label>
+          <label for="file" class="file-descr">Video file upload</label>
           <input
             type="file"
             class="file-upload"
             @change="onFileChange" />
         </div>
         <div>
-          <button :disabled="!this.selectedFile || uploading"  class="btn btn-dark btn-lg btn-block">
+          <button :disabled="!this.selectedFile || uploading"  class="btn btn-dark btn-lg btn-block" v-on:click="showWaiting=true">
             <span>Upload</span>            
           </button>
+        </div>
+        <div>
+          <label v-if="showWaiting" role="alert">Please, wait a few seconds till the video uploads</label>
         </div>
         <div>
           <div v-if="message" role="alert">{{ message }}</div>
@@ -70,6 +73,7 @@ export default {
       selectedFile: "",
       video: new Video('', ''),
       uploading: false,
+      showWaiting: false
     };
   },
   methods: {
